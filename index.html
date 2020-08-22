@@ -1,9 +1,22 @@
 ---
-layout: default
+layout: page
 ---
 
-<h1> Welcome to jekyll-tailwind-starter!</h1>
-
-{% for post in site.posts %}
-  <a href="{{ post.url }}">{{ post.title }}</a>
-{% endfor %}
+<div class="max-w-2xl">
+	<img class="h-64 w-64 rounded-full my-6 mx-auto" src="img/ap.jpg">
+	<div class="text-center">
+		<h2 class="text-2xl font-bold mb-8">Hi, that's me. 👋</h2>
+		<p class="font-bold text-gray-700 text-lg mb-8">
+			My name is Andrew Pepin and I'm a Laravel developer based in Kent, UK.
+		</p>
+		<p class="font-bold text-gray-700 text-lg mb-8">
+			I specialise in backend development for websites, webapps and RESTful APIs but
+			also experienced with frontend frameworks like Angular, Vue.js, 
+			Bootstrap and TailwindCSS.
+		</p>
+		<h2 class="text-2xl font-bold mb-8">Some recent posts</h2>
+		{% for post in site.posts %}
+		  <a class="underline" href="{{ post.url }}">{{ post.title }}</a>
+		{% endfor %}
+	</div>
+</div>
